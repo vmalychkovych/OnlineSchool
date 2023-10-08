@@ -28,7 +28,7 @@ namespace OnlineSchool.Controllers
 
             if(_unitOfWork.UserRepository.Get(u => u.Login == login).Password == password)
             {
-                return View();
+                return RedirectToAction("Index", "Home");
             }
 
             return NotFound();
